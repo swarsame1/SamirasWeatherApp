@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather Network</title>
+  </head>
+  <body>
+    <div class="container">
+          <span class="search-bar">
+            <form class="d-flex" id="search-form">
+                <div class="row">
+                    <div class="col">
+                <input
+              type="search"
+              placeholder="Type a city..."
+              autofocus= "on"
+              autocomplete = "off"
+              id="city-input"
+               class="form-control shadow-sm"
+              />
+                    </div>
+                    <div class="col-3">
+                      <input 
+                      type="submit"
+                      value = "Search"
+                      class="form-control btn btn primary shadow-sm"
+                      />
+                    </div>
+                  </div>            
+          
+            
+            </form>
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h1 class="current-city" id="city"></h1>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-6">
+          <div class="actual-weather">
+            <img
+              class="current-weather"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="col-6">
+          <h3 class="current-date" 
+            Thursday April 8 2021<br />
+            <span class="hour"></span>
+            <div id="date"></div>
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="current-temperature">
+            <h4 id="temperature"> <span id="temperature"></span></h4>
+            <p class="degrees">
+              <a href="#" id="celcius-link">°C</a> |
+              <a href="#" id="farenheit-link">°F</a>
+            </p>
+            <p id = "description"> 
+            </p>
+          </div>
+          <div class="current-stats" id="stats">
+            <p class="humidity">Humidity: <span id="humidity">  </span>%</p>
+            <p class="wind">Wind: <span id= "wind"></span> km/hr </p>
+          </div>
+        </div>
+      </div>
+      <div class="days">
+        <div class="row">
+          <div class="col">
+            Sun
+            <br />
+            ☀️
+            <br />
+            8℃/
+            <br />
+            46°F
+          </div>
+          <div class="col">
+            Mon
+            <br />
+            🌞
+            <br />
+            5℃/
+            <br />
+            41°F
+          </div>
+          <div class="col">
+            Tues
+            <br />
+            ☁️
+            <br />
+            7℃/
+            <br />
+            44°F
+          </div>
+          <div class="col">
+            Wed
+            <br />
+            ☁️
+            <br />
+            11℃/
+            <br />
+            51°F
+          </div>
+          <div class="col">
+            Thurs
+            <br />
+            🌧
+            <br />
+            10℃/
+            <br />
+            50°F
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
